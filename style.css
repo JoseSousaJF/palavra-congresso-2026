@@ -42,8 +42,8 @@ body {
 }
 
 .logo {
-    max-width: 140px;
-    max-height: 140px;
+    max-width: 220px;       /* Aumentado para dar mais destaque e presença */
+    max-height: 220px;
     width: auto;
     height: auto;
     display: block;
@@ -54,8 +54,8 @@ body {
 
 @media (min-width: 768px) {
     .logo {
-        max-width: 130px;
-        max-height: 130px;
+        max-width: 200px;
+        max-height: 200px;
     }
 }
 
@@ -106,7 +106,7 @@ body {
 
 .btn-instagram {
     background: transparent;
-    color: #ffffff; /* Letras em branco puro */
+    color: #ffffff;
     border: 1px solid var(--border-color);
     padding: 14px 28px;
     border-radius: 50px;
@@ -127,7 +127,7 @@ body {
 .btn-instagram:hover {
     background: rgba(53, 154, 216, 0.2);
     border-color: var(--blue-sky);
-    color: #ffffff; /* Garante letras brancas ao passar o mouse */
+    color: #ffffff;
     transform: translateY(-2px);
 }
 
