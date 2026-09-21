@@ -42,17 +42,16 @@ body {
 }
 
 .logo {
-    max-width: 140px;       /* Tamanho perfeito e proporcional */
-    max-height: 140px;      /* Impede que a logo fique gigante verticalmente */
+    max-width: 140px;
+    max-height: 140px;
     width: auto;
     height: auto;
     display: block;
     margin: 0 auto;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
-    mix-blend-mode: screen; /* Mescla o fundo da imagem com o fundo do site */
+    mix-blend-mode: screen;
 }
 
-/* Ajuste fino para telas de computador (Web) */
 @media (min-width: 768px) {
     .logo {
         max-width: 130px;
@@ -97,6 +96,14 @@ body {
     text-transform: uppercase;
 }
 
+.acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+}
+
 button {
     background: var(--blue-sky);
     color: var(--blue-navy);
@@ -113,12 +120,40 @@ button {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: all 0.2s ease;
+    width: 100%;
+    max-width: 280px;
 }
 
 button:hover {
     transform: translateY(-2px);
     background-color: #4eb0f0;
     box-shadow: 0 6px 20px rgba(53, 154, 216, 0.4);
+}
+
+.btn-instagram {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 280px;
+}
+
+.btn-instagram:hover {
+    background: rgba(53, 154, 216, 0.15);
+    border-color: var(--blue-sky);
+    transform: translateY(-2px);
 }
 
 .fade-out {
