@@ -1,0 +1,119 @@
+:root {
+    --blue-navy: #0a1738;
+    --blue-royal: #13337a;
+    --blue-sky: #359ad8;
+    --white: #ffffff;
+    --card-bg: rgba(19, 51, 122, 0.45);
+    --border-color: rgba(53, 154, 216, 0.35);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--blue-navy);
+    background-image: radial-gradient(circle at 50% 25%, #13337a 0%, #0a1738 100%);
+    color: var(--white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.subtag {
+    color: var(--blue-sky);
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.tema {
+    font-size: 1.35rem;
+    color: var(--white);
+    margin-top: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.card-versiculo {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 36px 24px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    position: relative;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.aspas {
+    font-size: 4rem;
+    color: var(--blue-sky);
+    opacity: 0.3;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-family: Georgia, serif;
+}
+
+.texto {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.referencia {
+    font-weight: 700;
+    color: var(--blue-sky);
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+button {
+    background: var(--blue-sky);
+    color: var(--blue-navy);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background-color: #4eb0f0;
+    box-shadow: 0 6px 20px rgba(53, 154, 216, 0.4);
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
