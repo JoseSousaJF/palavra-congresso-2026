@@ -34,40 +34,37 @@ body {
     gap: 16px;
 }
 
+/* Força o topo a ficar em coluna (texto em cima, logo embaixo) */
 .header {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
     justify-content: center;
     align-items: center;
     padding: 5px 0;
-    gap: 6px;
+    gap: 10px;
+    width: 100%;
 }
 
 .boas-vindas {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--blue-sky);
     text-transform: uppercase;
     letter-spacing: 2px;
     opacity: 0.9;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .logo {
-    max-width: 220px;
-    max-height: 220px;
-    width: auto;
+    max-width: 230px;
+    width: 70%;
     height: auto;
     display: block;
     margin: 0 auto;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
     mix-blend-mode: screen;
-}
-
-@media (min-width: 768px) {
-    .logo {
-        max-width: 200px;
-        max-height: 200px;
-    }
 }
 
 .card-versiculo {
