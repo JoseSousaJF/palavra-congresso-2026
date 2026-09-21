@@ -12,14 +12,15 @@
 <body>
     <main class="container">
         <header class="header">
-            <p class="boas-vindas">Seja bem-vindo ao nosso</p>
+            <p id="boas-vindas" class="boas-vindas">Seja bem-vindo ao nosso</p>
             <img src="logo.png" alt="Logo Congresso Unificado 2026" class="logo">
         </header>
 
-        <section class="card-versiculo">
+        <section class="card-versiculo" id="card-versiculo">
             <div class="aspas">“</div>
             <p id="texto-versiculo" class="texto">Carregando uma palavra para você...</p>
             <p id="ref-versiculo" class="referencia"></p>
+            <span class="dica-copiar">Toque no card para copiar</span>
         </section>
 
         <div class="acoes">
@@ -33,6 +34,9 @@
             </a>
         </div>
     </main>
+
+    <!-- Notificação Flutuante (Toast) -->
+    <div id="toast" class="toast">Versículo copiado!</div>
 
     <script src="script.js"></script>
 </body>
