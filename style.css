@@ -31,29 +31,40 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .logo {
-    max-width: 260px;
-    width: 85%;
+    max-width: 140px;       /* Tamanho perfeito e proporcional */
+    max-height: 140px;      /* Impede que a logo fique gigante verticalmente */
+    width: auto;
     height: auto;
     display: block;
-    filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.5));
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+    mix-blend-mode: screen; /* Mescla o fundo da imagem com o fundo do site */
+}
+
+/* Ajuste fino para telas de computador (Web) */
+@media (min-width: 768px) {
+    .logo {
+        max-width: 130px;
+        max-height: 130px;
+    }
 }
 
 .card-versiculo {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 16px;
-    padding: 36px 24px;
+    padding: 32px 20px;
     backdrop-filter: blur(12px);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
     position: relative;
@@ -61,7 +72,7 @@ body {
 }
 
 .aspas {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--blue-sky);
     opacity: 0.3;
     position: absolute;
@@ -71,7 +82,7 @@ body {
 }
 
 .texto {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
     color: var(--white);
@@ -81,7 +92,7 @@ body {
 .referencia {
     font-weight: 700;
     color: var(--blue-sky);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
@@ -92,7 +103,7 @@ button {
     border: none;
     padding: 14px 28px;
     border-radius: 50px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
     display: inline-flex;
