@@ -36,13 +36,24 @@ body {
 
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5px 0;
+    gap: 6px;
+}
+
+.boas-vindas {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--blue-sky);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.9;
 }
 
 .logo {
-    max-width: 220px;       /* Aumentado para dar mais destaque e presença */
+    max-width: 220px;
     max-height: 220px;
     width: auto;
     height: auto;
