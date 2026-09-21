@@ -17,8 +17,8 @@ const versiculos = [
     { texto: "Entrega o teu caminho ao Senhor; confia nele, e ele o fará.", ref: "Salmos 37:5" },
     { texto: "O meu socorro vem do Senhor que fez o céu e a terra.", ref: "Salmos 121:2" },
     { texto: "Não se turbe o vosso coração; credes em Deus, crede também em mim.", ref: "João 14:1" },
-    { texto: "Tudo posso naquele que me fortalece.", ref: "Filipenses 4:13" },
-    { texto: "Agrada-te do Senhor, e ele satisfará os desejos do teu coração.", ref: "Salmos 37:4" },
+    { texto: "Lançando sobre ele toda a vossa ansiedade, porque ele tem cuidado de vós.", ref: "1 Pedro 5:7" },
+    { texto: "Porque Deus não nos deu o espírito de temor, mas de fortaleza, e de amor, e de moderação.", ref: "2 Timóteo 1:7" },
     { texto: "Porque onde estiverem dois ou três reunidos em meu nome, aí estou eu no meio deles.", ref: "Mateus 18:20" },
     { texto: "Alegrai-vos na esperança, sede pacientes na tribulação, perseverai na oração.", ref: "Romanos 12:12" },
     { texto: "Confia no Senhor de todo o teu coração, e não te estribes no teu próprio entendimento.", ref: "Provérbios 3:5" },
@@ -51,7 +51,7 @@ const versiculos = [
     { texto: "Aquietai-vos, e sabei que eu sou Deus; serei exaltado entre os gentios; serei exaltado sobre a terra.", ref: "Salmos 46:10" },
     { texto: "O Senhor dos Exércitos está conosco; o Deus de Jacó é o nosso refúgio.", ref: "Salmos 46:11" },
     { texto: "Cria em mim, ó Deus, um coração puro, e renova em mim um espírito reto.", ref: "Salmos 51:10" },
-    { texto: "Não me me lances fora da tua presença, e não retires de mim o teu Espírito Santo.", ref: "Salmos 51:11" },
+    { texto: "Não me lances fora da tua presença, e não retires de mim o teu Espírito Santo.", ref: "Salmos 51:11" },
     { texto: "Restitui-me a alegria da tua salvação, e sustenta-me com um espírito voluntário.", ref: "Salmos 51:12" },
     { texto: "Em Deus pus a minha confiança; não temerei o que me possa fazer o homem.", ref: "Salmos 56:11" },
     { texto: "Misericórdia, ó Deus, misericórdia, pois em ti a minha alma se refugia; à sombra das tuas asas me refugiarei.", ref: "Salmos 57:1" },
@@ -138,7 +138,6 @@ function sortearVersiculo() {
     }, 250);
 }
 
-// Atualiza a frase de boas-vindas com base no horário local
 function atualizarSaudacao() {
     const hora = new Date().getHours();
     const elSaudacao = document.getElementById('boas-vindas');
@@ -153,7 +152,6 @@ function atualizarSaudacao() {
     }
 }
 
-// Configura o evento de toque/clique no card para copiar o versículo
 function configurarCopiaCard() {
     const card = document.getElementById('card-versiculo');
     const toast = document.getElementById('toast');
@@ -176,7 +174,6 @@ function configurarCopiaCard() {
     }
 }
 
-// Executa ao carregar a página
 window.onload = function() {
     atualizarSaudacao();
     sortearVersiculo();
