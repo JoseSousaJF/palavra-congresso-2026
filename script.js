@@ -138,18 +138,19 @@ function sortearVersiculo() {
     }, 250);
 }
 
-function atualizarSaudacao() {
+function obterSaudacao() {
     const hora = new Date().getHours();
-    const elSaudacao = document.getElementById('boas-vindas');
-    if (!elSaudacao) return;
+    let saudacaoHora = "";
 
     if (hora >= 5 && hora < 12) {
-        elSaudacao.textContent = "Bom dia! Seja bem-vindo ao nosso";
+        saudacaoHora = "Bom dia!";
     } else if (hora >= 12 && hora < 18) {
-        elSaudacao.textContent = "Boa tarde! Seja bem-vindo ao nosso";
+        saudacaoHora = "Boa tarde!";
     } else {
-        elSaudacao.textContent = "Boa noite! Seja bem-vindo ao nosso";
+        saudacaoHora = "Boa noite!";
     }
+
+    return `A paz do Senhor! ${saudacaoHora} Seja bem-vindo ao nosso`;
 }
 
 function configurarCopiaCard() {
