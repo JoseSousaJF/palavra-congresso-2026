@@ -131,14 +131,16 @@ function sortearVersiculo() {
 
     setTimeout(() => {
         const versiculoSorteado = obterProximoVersiculo();
-        elTexto.innerText = versiculoSorteado.texto;
-        elRef.innerText = versiculoSorteado.ref;
+        if (elTexto && elRef) {
+            elTexto.innerText = versiculoSorteado.texto;
+            elRef.innerText = versiculoSorteado.ref;
+        }
 
         if (card) card.classList.remove('fade-out');
     }, 250);
 }
 
-function obterSaudacao() {
+function atualizarSaudacao() {
     const hora = new Date().getHours();
     let saudacaoHora = "";
 
@@ -150,7 +152,10 @@ function obterSaudacao() {
         saudacaoHora = "Boa noite!";
     }
 
-    return `A paz do Senhor! ${saudacaoHora} Seja bem-vindo ao nosso`;
+    const elBoasVindas = document.getElementById("boas-vindas");
+    if (elBoasVindas) {
+        elBoasVindas.innerText = `A paz do Senhor! ${saudacaoHora} Seja bem-vindo ao nosso`;
+    }
 }
 
 function configurarCopiaCard() {
@@ -164,10 +169,12 @@ function configurarCopiaCard() {
             const mensagem = `"${texto}" - ${ref}\n\nCongresso Unificado 2026`;
 
             navigator.clipboard.writeText(mensagem).then(() => {
-                toast.classList.add('show');
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 2000);
+                if (toast) {
+                    toast.classList.add('show');
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                    }, 2000);
+                }
             }).catch(err => {
                 console.error('Erro ao copiar: ', err);
             });
