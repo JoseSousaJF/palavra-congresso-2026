@@ -3,7 +3,7 @@
     --blue-royal: #13337a;
     --blue-sky: #359ad8;
     --white: #ffffff;
-    --card-bg: rgba(19, 51, 122, 0.45);
+    --card-bg: rgba(19, 51, 122, 0.55);
     --border-color: rgba(53, 154, 216, 0.35);
 }
 
@@ -15,7 +15,12 @@
 
 body {
     background-color: var(--blue-navy);
-    background-image: radial-gradient(circle at 50% 25%, #13337a 0%, #0a1738 100%);
+    /* Camada escura suave por cima da imagem para garantir leitura perfeita dos textos */
+    background-image: linear-gradient(rgba(10, 23, 56, 0.75), rgba(10, 23, 56, 0.85)), url('fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--white);
     font-family: 'Plus Jakarta Sans', sans-serif;
     min-height: 100vh;
@@ -51,10 +56,11 @@ body {
     color: var(--blue-sky);
     text-transform: uppercase;
     letter-spacing: 2px;
-    opacity: 0.9;
+    opacity: 0.95;
     display: block;
     width: 100%;
     text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
@@ -63,7 +69,7 @@ body {
     height: auto;
     display: block;
     margin: 0 auto;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
     mix-blend-mode: screen;
 }
 
@@ -72,8 +78,8 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 32px 20px 20px 20px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
     position: relative;
     transition: opacity 0.3s ease, transform 0.2s ease, background-color 0.2s ease;
     cursor: pointer;
@@ -83,13 +89,13 @@ body {
 
 .card-versiculo:active {
     transform: scale(0.98);
-    background: rgba(19, 51, 122, 0.7);
+    background: rgba(19, 51, 122, 0.75);
 }
 
 .aspas {
     font-size: 3.5rem;
     color: var(--blue-sky);
-    opacity: 0.3;
+    opacity: 0.35;
     position: absolute;
     top: -15px;
     left: 20px;
@@ -116,7 +122,7 @@ body {
 .dica-copiar {
     display: block;
     font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.45);
+    color: rgba(255, 255, 255, 0.55);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
@@ -131,7 +137,7 @@ body {
 }
 
 .btn-instagram {
-    background: transparent;
+    background: rgba(10, 23, 56, 0.6);
     color: #ffffff;
     border: 1px solid var(--border-color);
     padding: 14px 28px;
@@ -145,19 +151,19 @@ body {
     gap: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    backdrop-filter: blur(8px);
     transition: all 0.2s ease;
     width: 100%;
     max-width: 280px;
 }
 
 .btn-instagram:hover {
-    background: rgba(53, 154, 216, 0.2);
+    background: rgba(53, 154, 216, 0.3);
     border-color: var(--blue-sky);
     color: #ffffff;
     transform: translateY(-2px);
 }
 
-/* Notificação Toast (Aviso de Copiado) */
 .toast {
     position: fixed;
     bottom: 30px;
