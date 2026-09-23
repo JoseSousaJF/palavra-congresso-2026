@@ -154,7 +154,7 @@ function atualizarSaudacao() {
 
     const elBoasVindas = document.getElementById("boas-vindas");
     if (elBoasVindas) {
-        elBoasVindas.innerText = `A paz do Senhor! ${saudacaoHora} Seja bem-vindo ao nosso`;
+        elBoasVindas.innerHTML = `A paz do Senhor! ${saudacaoHora}<br>Seja bem-vindo ao nosso`;
     }
 }
 
