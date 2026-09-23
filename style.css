@@ -51,18 +51,17 @@ body {
 }
 
 .boas-vindas {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 700;
-    color: var(--blue-sky);
+    color: #ffffff; /* Cor branca para máximo contraste */
     text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.95;
+    letter-spacing: 1.5px;
     display: block;
     width: 100%;
     text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.5; /* Espaçamento ideal entre as duas linhas */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); /* Sombra preta para destacar sobre o fundo */
 }
-
 .logo {
     max-width: 230px;
     width: 70%;
