@@ -16,7 +16,7 @@
 body {
     background-color: var(--blue-navy);
     /* Camada escura suave por cima da imagem para garantir leitura perfeita dos textos */
-    background-image: linear-gradient(rgba(10, 23, 56, 0.75), rgba(10, 23, 56, 0.85)), url('fundo.jpg');
+    background-image: linear-gradient(rgba(10, 23, 56, 0.75), rgba(10, 23, 56, 0.85)), url('fundo.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
